@@ -41,4 +41,4 @@ jobs:
     #    pytest
     - name: run
       run: |
-        python tutorialBot.py
+        python tutorialBot.py &
