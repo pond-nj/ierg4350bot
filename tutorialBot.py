@@ -75,8 +75,6 @@ def main() -> None:
     database = mongodb_client["test"]
     collection = database['chat-history']
     # collection.drop()
-    for i in collection.find({}):
-        print(i)
 
     updater = Updater("6075707365:AAGkabhp1JEsCnYVOw305YABKUjyyK6vAuA")
 
