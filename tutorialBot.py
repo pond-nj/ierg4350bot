@@ -8,6 +8,8 @@ import datetime;
 
 logger = logging.getLogger(__name__)
 
+#test
+
 def store(func):
     def wrapper_store(*args, **kwargs):
         update = args[0]
