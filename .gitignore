@@ -1,0 +1,12 @@
+.cache
+.local
+.mongodb
+.ssh
+.vscode-server
+.bash_logout
+.bashrc
+.profile
+.sudo_as_admin_successful
+.wget-hsts
+Pipfile
+Pipfile.lock

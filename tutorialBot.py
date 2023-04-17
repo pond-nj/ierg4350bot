@@ -47,7 +47,7 @@ def visit(update: Update, context: CallbackContext) -> None:
 
         context.bot.send_message(
             update.message.chat_id,
-            htmlReply.text[:max(4096, len(htmlReply.text))],
+            htmlReply.text[:min(4096, len(htmlReply.text))],
             # To preserve the markdown, we attach entities (bold, italic...)
             entities=update.message.entities
         )
