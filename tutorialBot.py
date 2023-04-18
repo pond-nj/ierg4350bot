@@ -73,7 +73,7 @@ def help(update: Update, context: CallbackContext)-> None:
 def undef_command(update: Update, context: CallbackContext)-> None:
     context.bot.send_message(
             update.message.chat_id,
-            update.message.text+"/n(command not found)",
+            update.message.text+"\n(command not found)",
             # To preserve the markdown, we attach entities (bold, italic...)
             entities=update.message.entities
         )
