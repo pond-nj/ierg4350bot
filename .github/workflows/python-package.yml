@@ -47,5 +47,6 @@ jobs:
     #    pytest
     - name: deploy
       run: |
+        #new 
         chmod 400 ierg4350bot.pem
         ssh -i ierg4350bot.pem -o StrictHostKeyChecking=no $USERNAME@$HOST $PULL_CMD
