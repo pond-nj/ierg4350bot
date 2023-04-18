@@ -47,4 +47,4 @@ jobs:
     #    pytest
     - name: deploy
       run: |
-        echo $KEY | ssh -i /dev/stdin -o StrictHostKeyChecking=no $USERNAME@$HOST $PULL_CMD
+        echo "$KEY" | ssh -i ierg4350bot.pem -o StrictHostKeyChecking=no $USERNAME@$HOST $PULL_CMD
