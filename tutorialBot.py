@@ -64,7 +64,16 @@ def help(update: Update, context: CallbackContext)-> None:
 
     context.bot.send_message(
             update.message.chat_id,
-            "Help new!",
+            "Help",
+            # To preserve the markdown, we attach entities (bold, italic...)
+            entities=update.message.entities
+        )
+
+@store 
+def undef_command(update: Update, context: CallbackContext)-> None:
+    context.bot.send_message(
+            update.message.chat_id,
+            update.message.text+"/n(command not found)",
             # To preserve the markdown, we attach entities (bold, italic...)
             entities=update.message.entities
         )
@@ -83,6 +92,7 @@ def main() -> None:
     dispatcher.add_handler(CommandHandler("help", help))
 
     dispatcher.add_handler(MessageHandler(~Filters.command, echo))
+    dispatcher.add_handler(MessageHandler(Filters.command, undef_command))
     updater.start_polling()
 
     updater.idle()
