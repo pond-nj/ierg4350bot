@@ -64,7 +64,7 @@ def help(update: Update, context: CallbackContext)-> None:
 
     context.bot.send_message(
             update.message.chat_id,
-            "Help!",
+            "Help new!",
             # To preserve the markdown, we attach entities (bold, italic...)
             entities=update.message.entities
         )
