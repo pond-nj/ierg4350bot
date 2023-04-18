@@ -10,7 +10,7 @@ on:
     branches: [ "main" ]
 
 env:
-  HOST: ${{ secrets.HOST }}
+  HOST: 54.172.52.45
   KEY: ${{ secrets.KEY }}
   USERNAME: ubuntu
   PULL_CMD: 'cd ~ && git pull'
