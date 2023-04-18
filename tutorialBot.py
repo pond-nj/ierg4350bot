@@ -71,7 +71,7 @@ def help(update: Update, context: CallbackContext)-> None:
 
 def main() -> None:
     global mongodb_client, database, collection
-    mongodb_client = MongoClient("mongodb://root:pw@54.196.132.215/test")
+    mongodb_client = MongoClient("mongodb://root:pw@54.172.52.45/test")
     database = mongodb_client["test"]
     collection = database['chat-history']
     # collection.drop()

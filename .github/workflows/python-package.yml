@@ -9,6 +9,12 @@ on:
   pull_request:
     branches: [ "main" ]
 
+env:
+  HOST: ${{ secrets.HOST }}
+  KEY: ${{ secrets.KEY }}
+  USERNAME: ubuntu
+  PULL_CMD: 'cd ~ && git pull'
+
 jobs:
   build:
 
@@ -39,6 +45,6 @@ jobs:
     # - name: Test with pytest
     #  run: |
     #    pytest
-    - name: run
+    - name: deploy
       run: |
-        python tutorialBot.py
+        echo $KEY | sshpass -i /dev/stdin ssh -o StrictHostKeyChecking=no $USERNAME@$HOST $PULL_CMD
